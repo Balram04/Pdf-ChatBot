@@ -1,0 +1,58 @@
+# Virtual Environment
+venv/
+.venv/
+env/
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Environment Variables
+.env
+
+# IDE
+.vscode/
+.idea/
+
+# OS Files
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# Jupyter Notebook
+.ipynb_checkpoints/
+
+# Python Packaging
+build/
+dist/
+*.egg-info/
+
+# Test & Coverage
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Type Checker
+.mypy_cache/
+.pyre/
+
+# Linter
+.ruff_cache/
+
+# Temporary Files
+*.tmp
+*.temp
+
+# Local Database
+*.db
+*.sqlite3
+
+# Vector Database (if generated locally)
+chroma/
+faiss_index/
+
+# Model Cache (optional)
+.cache/
