@@ -1,15 +1,18 @@
 from dotenv import load_dotenv
 import os
+from pathlib import Path
 from langchain_google_genai import GoogleGenerativeAIEmbeddings
 
-load_dotenv()
+# Load .env from the project root (two levels up from this file)
+project_root = Path(__file__).resolve().parents[1]
+load_dotenv(dotenv_path=project_root / ".env")
 
 def get_embedding_model():
-    api_key = os.getenv("GEMINI_API_KEY")
+    api_key = os.getenv("GOOGLE_API_KEY")
 
     if not api_key:
         raise RuntimeError(
-            "Missing Gemini API key. Set GOOGLE_API_KEY or GEMINI_API_KEY in your .env file."
+            "Missing Google API key. Set GOOGLE_API_KEY in your .env file."
         )
 
     embeddings = GoogleGenerativeAIEmbeddings(
