@@ -12,22 +12,12 @@ splitter = get_text_splitter()
 chunks = splitter.split_documents(documents)
 
 embedding_model = get_embedding_model()
-
-vector = embedding_model.embed_query(chunks[0].page_content)
-
 vector_store = create_vector_store(
     chunks,
     embedding_model
 )
 
 print("Vector Store Created Successfully")
-
-print(splitter)
-print(chunks[5].page_content)
-print(type(vector))
-print(len(vector))
-print(vector[:10])
-from langchain_community.document_loaders import PyPDFLoader
 
 
 
